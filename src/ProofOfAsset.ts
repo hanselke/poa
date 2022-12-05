@@ -31,6 +31,8 @@ class ProofOfAsset extends SmartContract {
     this.MinBalance.set(_MinBalance);
   }
   @method verifyAsset(verifierData: VerifierData) {
+    // maybe we need to go for an access token/tmp url sort of way? so that fetch happens inside here
+    // like fetch(www.dbs.com.sg/?token=)
     const assetVerifierUrl_ = this.assetVerifierUrl.get();
     this.assetVerifierUrl.assertEquals(assetVerifierUrl_);
     Circuit.log(
