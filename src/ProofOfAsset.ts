@@ -33,8 +33,8 @@ class ProofOfAsset extends SmartContract {
   @method verifyAsset(verifierData: VerifierData) {
     // maybe we need to go for an access token/tmp url sort of way? so that fetch happens inside here
     // like fetch(www.dbs.com.sg/?token=)
-    const assetVerifierUrl_ = this.assetVerifierUrl.get();
-    this.assetVerifierUrl.assertEquals(assetVerifierUrl_);
+    const assetVerifierUrl_ = this.AssetVerifierUrlHash.get();
+    this.AssetVerifierUrlHash.assertEquals(assetVerifierUrl_);
     Circuit.log(
       'ProofOfAsset:verifyAsset:assetVerifierUrl_',
       assetVerifierUrl_
