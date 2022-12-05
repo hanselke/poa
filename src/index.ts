@@ -1,3 +1,3 @@
-import { Add } from './Add.js';
+import { ProofOfAsset } from './ProofOfAsset.js';
 
-export { Add };
+export { ProofOfAsset };
